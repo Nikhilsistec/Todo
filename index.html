@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minor project</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body onload="initclock()">
+    <!-- Digital clock -->
+    <div class="datetime" >
+        <div class="date">
+            <span>Hour</span>,
+            <span>Minutes</span>,
+            <span>seconds</span>
+        </div>
+        <div class="time">
+            <span id="hour">00</span>:
+            <span id="minutes">00</span>:
+            <span id="seconds">00</span>
+            <span id="period">AM</span>
+        
+        </div>
+    </div>
+     <!-- Digital clock -->
+    <div class="alarm-container">
+    <h1>Opation to set alarm</h1>
+    <input type="text" id="alarm" name="alarm" placeholder="Date & Time yyyy.mm.dd hh:mm:ss">
+    <br>
+    <button type="submit" class="sub-btn" id="alarmsubmit">Set Alarm</button>
+    </div>
+    <div class="container-main">
+        <div class="container">
+            <div class="todolist" >
+                <h1>LIFE TO DO LIST</h1>
+                <hr>
+                <div class="add-element">
+                    <input type="text" id="add" placeholder="Type something to do">
+                    <button id="btn"> + </button>
+                </div>
+                <div class="element-list" id="invoice">
+                    <ul id="list">
+                        <li>by some milk
+                            <button class ="cross" class="cross" onclick="deleteNote(this.parentElement)" alt="remove">
+                                <i class="fas fa-trash">-</i>
+                            </button>
+                            <!-- <img src="pro image/download.png" class="cross" onclick="deleteNote(this.parentElement)" alt="remove"></li> -->
+                        <li>Do your work
+                            <button class ="cross" class="cross" onclick="deleteNote(this.parentElement)" alt="remove">
+                                <i class="fas fa-trash">-</i>
+                                </button>
+                            <!-- <img src="pro image/download.png" class="cross" onclick="deleteNote(this.parentElement)" alt="remove"> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="button-primary">
+            <button class="btn-primary" id="download"> Download-Pdf </button>
+        </div>
+    </div>
+
+    <script src="minorproject.js"></script>
+
+</body>
+
+</html>
